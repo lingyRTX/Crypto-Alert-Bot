@@ -1,0 +1,1 @@
+"""Frontend модули для CryptoAlertBot"""

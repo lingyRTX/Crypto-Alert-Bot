@@ -1,0 +1,6 @@
+{
+  "telegram_token": "",
+  "telegram_user_id": "",
+  "check_interval": 5,
+  "alerts": []
+}
