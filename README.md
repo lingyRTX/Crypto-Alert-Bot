@@ -1,178 +1,285 @@
 # CryptoAlertBot
 
-Real-time cryptocurrency price monitoring with Telegram notifications.
+**Real-time cryptocurrency price monitoring with Telegram notifications**
 
-## About
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org)
+[![Platform: Windows](https://img.shields.io/badge/Platform-Windows-blue.svg)](https://www.microsoft.com/windows)
+[![GitHub Release](https://img.shields.io/badge/Release-v1.0.0-blue.svg)](https://github.com/lingyRTX/Crypto-Alert-Bot/releases)
 
-CryptoAlertBot is a lightweight Windows application that monitors cryptocurrency prices and sends Telegram notifications when prices reach your target levels. Monitor any of 40,000+ cryptocurrencies with customizable check intervals.
+---
 
-## Telegram Contacts
+## Quick Links
 
-- Telegram Channel for new tools: https://t.me/toolsforcrypto
-- Report bugs and feature requests: https://t.me/lingytm
+| Link | Description |
+|------|-------------|
+| [Download EXE](https://github.com/lingyRTX/Crypto-Alert-Bot/releases) | Download latest release |
+| [Telegram Channel](https://t.me/toolsforcrypto) | New tools and updates |
+| [Report Bug](https://t.me/lingytm) | Contact for bug reports |
+| [Installation Guide](INSTALL.md) | Step-by-step setup |
+| [License](LICENSE) | MIT License |
+
+---
+
+## Table of Contents
+
+- [Features](#features)
+- [Quick Start](#quick-start)
+- [Setup Guide](#setup-guide)
+- [System Requirements](#system-requirements)
+- [Technology Stack](#technology-stack)
+- [Security](#security)
+- [FAQ](#faq)
+- [Support](#support)
+
+---
 
 ## Features
 
-- Monitor 40,000+ cryptocurrencies from CoinGecko API
-- Set alerts for price thresholds (rises above or falls below)
-- Receive Telegram notifications instantly
-- Customizable check intervals (1-60 minutes)
-- Professional Windows desktop application
-- Light and dark themes available
-- All data stored locally, no cloud sync
-- Free and open source
+► Monitor 40,000+ cryptocurrencies from CoinGecko API  
+► Set price alerts for any cryptocurrency  
+► Receive instant Telegram notifications  
+► Customizable check intervals (1-60 minutes)  
+► Light and dark themes  
+► Professional Windows application  
+► Local storage - no cloud sync  
+► Free and open source  
+
+---
 
 ## Quick Start
 
-### Using Pre-built EXE
+### Option 1: Download EXE (Easiest)
 
-1. Download CryptoAlertBot.exe from the Releases page
-2. Run the executable
-3. Configure Telegram settings (see Setup section below)
-4. Create your first price alert
+1. [Download from Releases](https://github.com/lingyRTX/Crypto-Alert-Bot/releases)
+2. Run CryptoAlertBot.exe
+3. Configure Telegram (see Setup Guide below)
+4. Create your first alert
 
-### Building from Source
+### Option 2: Build from Source
 
 ```bash
-git clone https://github.com/lingytm/CryptoAlertBot.git
+git clone https://github.com/lingyRTX/Crypto-Alert-Bot.git
 cd CryptoAlertBot
 pip install -r requirements.txt
 python main.py
 ```
 
-To build your own EXE:
+Build your own EXE:
 ```bash
 python build_exe.py
 ```
+
+---
 
 ## Setup Guide
 
 ### Step 1: Create Telegram Bot
 
-1. Open Telegram and search for @BotFather
-2. Send /newbot command
-3. Follow the instructions to create a bot
-4. Copy the Bot Token
+1. Search for [@BotFather](https://t.me/BotFather) in Telegram
+2. Send `/newbot` command
+3. Follow instructions to create bot
+4. **Copy your Bot Token**
 
 ### Step 2: Get Your Chat ID
 
-1. Search for @userinfobot in Telegram
+1. Search for [@userinfobot](https://t.me/userinfobot) in Telegram
 2. Click Start
-3. The bot will send you your numeric Chat ID
+3. **Copy your numeric Chat ID**
 
-### Step 3: Configure the Application
+### Step 3: Configure Application
 
 1. Launch CryptoAlertBot
-2. Go to Settings tab
-3. Enter your Bot Token and Chat ID
-4. Click "Test Connection" to verify
-5. Save settings
+2. Go to **Settings** tab
+3. Paste Bot Token and Chat ID
+4. Click **Test Connection**
+5. Verify test message received
 
-### Step 4: Create an Alert
+### Step 4: Create First Alert
 
-1. Go to Price Alerts tab
-2. Select a cryptocurrency
-3. Enter target price in USD
-4. Choose condition (rises above or falls below)
-5. Click "Add Alert"
+1. Go to **Price Alerts** tab
+2. Select cryptocurrency (e.g., Bitcoin)
+3. Enter target price (e.g., 45000)
+4. Choose condition: **rises above** or **falls below**
+5. Click **Add Alert**
+
+---
 
 ## Usage
 
 ### Price Alerts Tab
 
-Create and manage price alerts. View current prices and alert status.
-
-- Cryptocurrency: Select from 40,000+ coins
-- Target Price: Price in USD
-- Condition: When to trigger the alert
+■ **Cryptocurrency** - Choose from 40,000+ coins  
+■ **Target Price** - Price in USD  
+■ **Condition** - When to send notification  
+■ **Current Price** - Real-time price display  
+■ **Status** - Active or triggered status  
 
 ### Settings Tab
 
-Configure Telegram connection and check interval.
-
-- Bot Token: Your Telegram bot authentication
-- Chat ID: Your Telegram user ID for notifications
-- Check Interval: How often to check prices (1-60 minutes)
+■ **Bot Token** - Telegram bot authentication  
+■ **Chat ID** - Your Telegram user ID  
+■ **Check Interval** - Frequency in minutes (1-60)  
 
 ### Activity Log Tab
 
-View notification history and application events.
+View all notifications and application events.
+
+---
 
 ## System Requirements
 
-- Windows 7 or newer (64-bit)
-- Active internet connection
-- Telegram account
+▸ **OS:** Windows 7 or newer (64-bit)  
+▸ **Internet:** Active connection required  
+▸ **Telegram:** Account needed for notifications  
+▸ **Disk Space:** ~50 MB for application  
+
+No additional software installation needed.
+
+---
 
 ## Technology Stack
 
-- Python 3.8+
-- PyQt5 for the desktop UI
-- CoinGecko API for price data
-- Telegram Bot API for notifications
-- PyInstaller for building the executable
+| Component | Technology |
+|-----------|-----------|
+| Language | Python 3.8+ |
+| UI Framework | PyQt5 |
+| Price Data | CoinGecko API |
+| Notifications | Telegram Bot API |
+| Packaging | PyInstaller |
+| Version Control | Git |
+
+---
 
 ## Project Structure
 
 ```
 CryptoAlertBot/
-├── main.py                    Entry point
-├── build_exe.py              Build script
-├── requirements.txt          Python dependencies
-├── frontend/                 UI layer (PyQt5)
-│   ├── main_window.py
-│   ├── light_styles.py
-│   └── dark_styles.py
-└── backend/                  Business logic
-    ├── api/                  External API clients
-    ├── telegram/            Telegram integration
-    ├── checker/             Price monitoring
-    ├── models/              Data structures
-    ├── services/            Service layer
-    ├── storage/             Configuration storage
-    └── data/                Cryptocurrency database
+├── main.py                      Application entry point
+├── build_exe.py                 EXE build script
+├── requirements.txt             Dependencies
+├── config.json                  Configuration template
+├── frontend/                    UI Layer
+│   ├── main_window.py          Main application window
+│   ├── light_styles.py         Light theme stylesheet
+│   └── dark_styles.py          Dark theme stylesheet
+└── backend/                     Business Logic
+    ├── api/                    External APIs
+    │   └── coingecko.py        Price data client
+    ├── telegram/               Notifications
+    │   └── bot.py             Telegram integration
+    ├── checker/                Monitoring service
+    │   └── price_checker.py   Price monitoring loop
+    ├── models/                 Data structures
+    ├── services/               Service orchestration
+    ├── storage/                Configuration storage
+    └── data/                   Cryptocurrency database
 ```
+
+---
 
 ## Security
 
-- All configuration stored locally in config.json
-- Telegram token stored only on your computer
-- No cloud servers or data tracking
-- Source code is open for review
-- Licensed under MIT
+**Local Storage Only**  
+All configuration stored in config.json on your computer. No cloud servers, no data tracking.
 
-## License
+**Open Source**  
+Full source code visible for transparency. No hidden processes. Licensed under MIT.
 
-MIT License. See LICENSE file for details.
+**No Permissions Needed**  
+Only reads public price data from CoinGecko. Only sends messages to your Telegram.
+
+---
+
+## Building Your Own EXE
+
+```bash
+python build_exe.py
+```
+
+Output: `dist/CryptoAlertBot.exe` (approximately 45 MB)
+
+---
 
 ## FAQ
 
-Q: Is this free?
-A: Yes, completely free and open source.
+**Q: Is CryptoAlertBot free?**  
+A: Yes, completely free and open source. No ads or premium features.
 
-Q: Will my Telegram be spammed?
-A: No, the bot only sends alerts to your Chat ID.
+**Q: Will my Telegram receive spam?**  
+A: No. The bot only sends alerts to your Chat ID that you configured.
 
-Q: How accurate are prices?
-A: Prices come from CoinGecko API. Updates are configurable (1-60 minutes).
+**Q: How accurate are the prices?**  
+A: Prices come from CoinGecko API. Updates every 1-60 minutes as configured.
 
-Q: Can I use on Mac or Linux?
-A: Currently Windows only.
+**Q: Can I use on Mac or Linux?**  
+A: Currently Windows only. Mac/Linux support in future versions.
 
-Q: What if I lose my token?
-A: Create a new bot with BotFather. There's no limit on bot creation.
+**Q: What if I lose my token?**  
+A: Create a new bot with @BotFather. There's no limit on bot creation.
 
-Q: Can I set multiple alerts for one coin?
-A: Yes, you can create multiple alerts with different price targets.
+**Q: Can I set multiple alerts for one coin?**  
+A: Yes. You can create multiple alerts with different price targets.
+
+**Q: How often does it check prices?**  
+A: Configurable from 1 to 60 minutes. Default is 5 minutes.
+
+---
 
 ## Support
 
-For bug reports and feature requests, contact @lingytm on Telegram.
+**Report Bugs:** [Contact @lingytm on Telegram](https://t.me/lingytm)
 
-Subscribe to https://t.me/toolsforcrypto for updates on new tools.
+**Follow for Updates:** [Subscribe to Tools for Crypto](https://t.me/toolsforcrypto)
+
+**GitHub Issues:** [Create an issue](https://github.com/lingyRTX/Crypto-Alert-Bot/issues)
+
+---
+
+## Contributing
+
+Found a bug? Have a feature request?
+
+1. [Read Contributing Guide](CONTRIBUTING.md)
+2. [Contact @lingytm](https://t.me/lingytm)
+3. Fork the repository
+4. Create a feature branch
+5. Submit a pull request
+
+---
+
+## License
+
+This project is licensed under the MIT License.  
+See [LICENSE](LICENSE) file for full details.
+
+---
 
 ## Disclaimer
 
-CryptoAlertBot is a price monitoring tool. It does not provide investment advice, make trading decisions, or manage crypto funds. Use at your own risk. Always do your own research before making investment decisions.
+CryptoAlertBot is a price monitoring tool only. It does not:
+- Provide investment advice
+- Make trading decisions  
+- Manage cryptocurrency funds
+- Guarantee price accuracy
 
-Cryptocurrency markets are volatile and prices can change rapidly.
+**Use at your own risk.** Always conduct your own research before making financial decisions.
+
+Cryptocurrency markets are highly volatile. Prices can change rapidly and without warning.
+
+---
+
+## Changelog
+
+**v1.0.0** (Initial Release)
+- Real-time price monitoring for 40,000+ cryptocurrencies
+- Telegram notifications
+- Professional Windows desktop application
+- Light and dark themes
+- Local configuration storage
+
+---
+
+*Created by [lingytm](https://t.me/lingytm)*
+
+Last Updated: April 2025
